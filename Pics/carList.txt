@@ -5,6 +5,7 @@ Lamborghini Huracán
 Maserati Quattroporte
 Bentley Continental GT
 Audi R8
+Ferrari California T
 
 Casual:
 Mercedes-Benz S-Class
@@ -12,7 +13,6 @@ Dacia Logan
 Hyundai i10
 Toyota Aygo
 Suzuki Swift
-Dacia Duster
 Dacia Duster
 
 Electric:
