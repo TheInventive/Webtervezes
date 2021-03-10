@@ -1,5 +1,24 @@
 Luxus:
 Mercedes-Benz S-Class
+Aston Martin Vanquish
+Lamborghini Huracán
+Maserati Quattroporte
+Bentley Continental GT
+Audi R8
 
 Casual:
 Mercedes-Benz S-Class
+Dacia Logan
+Hyundai i10
+Toyota Aygo
+Suzuki Swift
+Dacia Duster
+Dacia Duster
+
+Electric:
+Tesla Model X
+Nissan Leaf
+BMW i3 94Ah
+Citroën C-Zero
+Chevrolet Spark EV
+Hyundai Ioniq
