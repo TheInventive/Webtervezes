@@ -1,0 +1,42 @@
+
+.tableContainer{
+    align-items: center;
+}
+
+table{
+    padding: 20px;
+    margin: 0 auto;
+}
+th {
+}
+
+td{
+    text-align: center;
+}
+
+td:nth-child(odd){
+    border: none;
+    height: 432px;
+    width: 768px;
+}
+
+td:nth-child(even){
+    padding: 20px;
+    font-family: "Lucida Sans";
+    vertical-align: top;
+}
+
+img{
+    margin: 0 auto !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffc481;
+}
