@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Css/navStyle.css">
+    <link rel="stylesheet" href="../Css/login.css">
     <title>Title</title>
 </head>
 <body>
@@ -28,5 +29,24 @@
         </li>
     </ul>
 </nav>
+<div class="outside">
+    <form method="POST">
+        <div class="container">
+            <label for="us">Felhasználónév</label>
+            <input id ="us" type="text" name="username" maxlength="100" autocomplete="off" required/>
+            <br>
+            <label for="un">E-mail-cím</label>
+            <input id="un" type="email" name="email" maxlength="100" placeholder="example@online.com" autocomplete="off" required/>
+            <br>
+            <label for="pd">Jelszó</label>
+            <input id ="pd" type="password" name="password" maxlength="100" autocomplete="off" required/>
+            <br>
+            <label for="pd2">Jelszó ismét</label>
+            <input id ="pd2" type="password" name="password" maxlength="100" autocomplete="off" required/>
+            <br>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>
 </body>
 </html>
