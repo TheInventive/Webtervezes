@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Css/navStyle.css">
-    <link rel="stylesheet" href="../Css/login.css">
+    <link rel="stylesheet" href="../Css/register.css">
     <title>Title</title>
 </head>
 <body>
@@ -34,6 +34,17 @@
         <div class="container">
             <label for="us">Felhasználónév</label>
             <input id ="us" type="text" name="username" maxlength="100" autocomplete="off" required/>
+            <br>
+            <label for="op1">Neme:</label>
+            <br>
+            <label for="op1">Férfi:</label>
+            <input type="radio" id="op1" name="sex" value="m"/>
+            <br>
+            <label for="op2">Nő:</label>
+            <input type="radio" id="op2" name="sex" value="f"/>
+            <br>
+            <label for="dt" >Születési dátum: </label>
+            <input type="date" id="dt" name="date-of-birth" min="1920-01-01"/>
             <br>
             <label for="un">E-mail-cím</label>
             <input id="un" type="email" name="email" maxlength="100" placeholder="example@online.com" autocomplete="off" required/>
