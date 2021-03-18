@@ -1,3 +1,7 @@
+*{
+    break-inside: avoid;
+}
+
 td:nth-child(odd){
     height: 216px;
     width: 384px;
@@ -6,6 +10,7 @@ td:nth-child(even){
     padding: 10px;
     font-size: 10px;
 }
+
 
 nav{
     display: none;

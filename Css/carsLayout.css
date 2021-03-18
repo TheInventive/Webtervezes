@@ -7,34 +7,62 @@ table{
     padding: 20px;
     margin: 0 auto;
 }
-th {
-}
 
 td{
     text-align: center;
 }
 
 td:nth-child(odd){
-    border: none;
     height: 432px;
     width: 768px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
 }
 
 td:nth-child(even){
-    padding: 20px;
-    font-family: "Lucida Sans";
+    font-family: 'Lucida Sans', sans-serif;
     vertical-align: top;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.tdContainer{
+    max-height: 400px !important;
+    overflow: auto;
+}
+
+.elvalaszto{
+    height: 50px !important; background: rgb(179,175,172) !important;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px 15px;
 }
 
 img{
-    margin: 0 auto !important;
-    height: 100% !important;
-    width: 100% !important;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
 }
 
 h1{
     margin-bottom: 15px;
     letter-spacing: 1px;
+    animation-name: cimsor;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cimsor {
+    from {color: grey;}
+    to {color: black; box-shadow: black 2px 2px}
 }
 
 p{
