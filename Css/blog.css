@@ -1,0 +1,31 @@
+section{
+    float: left;
+    margin: 1.5%;
+    width: 63%;
+}
+
+aside{
+    position: relative;
+    top: 200px;
+    background: #888888;
+    float: right;
+    margin: 0 1.5%;
+    width: 30%;
+    z-index: -100;
+    text-align: center;
+    border: 2px black groove;
+    border-radius: 30px;
+}
+
+main{
+    margin: auto;
+    position: static;
+}
+
+aside p {
+    color: white;
+}
+
+aside * {
+    margin: 20px;
+}
