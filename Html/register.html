@@ -39,13 +39,13 @@
             <input id ="us" type="text" name="username" maxlength="100" autocomplete="off" required/>
             <br>
             <br>
-            <p>Neme:</p>
-            <div class="data">
+            <fieldset class="data">
+                <legend>Neme</legend>
                 <label class="opLabel" for="op1">Férfi:</label>
                 <input type="radio" id="op1" name="sex" value="m"/>
                 <label class="opLabel" for="op2">Nő:</label>
                 <input type="radio" id="op2" name="sex" value="f"/>
-            </div>
+            </fieldset>
             <br>
             <label for="dt" >Születési dátum: </label>
             <div class="data">
@@ -62,6 +62,7 @@
             <input id ="pd2" type="password" name="password" maxlength="100" autocomplete="off" required/>
             <br>
             <input type="submit" value="Register">
+            <input type="hidden" id="custId" name="custId" value="2">
         </div>
     </form>
 </div>

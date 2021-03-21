@@ -8,10 +8,25 @@
  body{
    background-image: url("../Pics/indexGb.jpg");
    background-position: center;
+   background-attachment: fixed;
  }
- p{
+ h1{
+  margin: 5px;
+ }
+ #content{
   text-align: center;
   font-size: large;
+
+ }
+ video{
+  margin: 20px;
+  border: 3px solid white;
+  border-radius: 25px;
+ }
+
+ p , h1{
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
  }
 </style>
 <script src=""></script>
@@ -41,9 +56,15 @@
    </li>
   </ul>
  </nav>
-<h1 style="text-align: center">Üdvözöljük!</h1>
-<p>Ezen a weboldalon összegyüjtöttünk pár nekünk tetsző autót a hétköznapi, elektromos és luxus kategóriában.</p>
-
+ <div id="content">
+  <h1>Üdvözöljük!</h1>
+  <p><strong>Ezen a weboldalon összegyüjtöttünk pár nekünk tetsző autót a hétköznapi, elektromos és luxus kategóriában.</strong></p>
+  <video width="854" height="480" controls>
+   <source src="../Video/Car%20Drift%20Racing.mp4" type="video/mp4">
+   <source src="https://www.pexels.com/search/videos/racing/" type="video/ogg">
+   Your browser does not support the video tag.
+  </video>
+ </div>
 </body>
 <footer>
  <p>Készítők: Hosszú Erik és Belovai Kriszián<br>
