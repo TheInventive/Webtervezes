@@ -2,6 +2,7 @@ section{
     float: left;
     margin: 1.5%;
     width: 63%;
+    outline: rgb(51,51,51) solid 10px;
 }
 
 aside{

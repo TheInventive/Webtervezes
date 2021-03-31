@@ -74,3 +74,24 @@ a {
     text-decoration: none;
     color: #ffc481;
 }
+
+@media print {
+    *{
+        break-inside: avoid;
+    }
+
+    td:nth-child(odd){
+        height: 216px;
+        width: 384px;
+        break-inside: avoid;
+    }
+    td:nth-child(even){
+        padding: 10px;
+        font-size: 10px;
+        break-inside: avoid;
+    }
+
+    nav, h1{
+        display: none;
+    }
+}

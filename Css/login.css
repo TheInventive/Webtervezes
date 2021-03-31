@@ -1,7 +1,7 @@
 body{
     background-image: url("../Pics/wallpaper.jpg") !important;
     background-position: center !important;
-    overflow: hidden !important;
+    overflow: auto !important;
 }
 form {
     max-width: 25%;
@@ -17,8 +17,7 @@ form {
     text-align: center;
 }
 
-/* Full-width inputs */
-input[type=email], input[type=password], input[type=text], .data {
+input[type=email], input[type=password], input[type=text], input[type=tel], .data {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -38,6 +37,15 @@ input[type=submit]{
     transition: background 2s;
 }
 
+input[type=reset]{
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
 input[type=submit]:hover{
     background: darkgreen;
 }
