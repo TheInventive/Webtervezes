@@ -14,7 +14,7 @@
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="casual-cars.html">Hétköznapi autók</a>
+                <a href="casual-cars.php">Hétköznapi autók</a>
             </li>
             <li>
                 <a class="active" href="electric-cars.html">Elektromos autók</a>
@@ -23,7 +23,7 @@
                 <a href="luxury-cars.html">Luxus autók</a>
             </li>
             <li>
-                <a href="blog.html">Blog</a>
+                <a href="blog.php">Blog</a>
             </li>
             <li>
                 <a href="login.html">Login</a>
