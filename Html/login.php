@@ -1,4 +1,4 @@
-<?php include php/login.php ?>
+<?php include "../php/login.php" ?>
 
 <!DOCTYPE html>
 <html lang="hu">
@@ -22,16 +22,16 @@
                 <a href="electric-cars.php">Elektromos autók</a>
             </li>
             <li>
-                <a href="luxury-cars.html">Luxus autók</a>
+                <a href="luxury-cars.php">Luxus autók</a>
             </li>
             <li>
                 <a href="blog.php">Blog</a>
             </li>
             <li>
-                <a class="active" href="login.html">Login</a>
+                <a class="active" href="login.php">Login</a>
             </li>
             <li>
-                <a href="register.html">Regisztráció</a>
+                <a href="register.php">Regisztráció</a>
             </li>
         </ul>
     </nav>
@@ -40,11 +40,11 @@
     <form method="post">
         <div class="container">
             <label for="un">E-mail-cím</label>
-            <input id="un" type="email" name="email" maxlength="100" placeholder="example@online.com" autocomplete="off" required/>
+            <input id="un" type="text" name="username" maxlength="100" placeholder="example@online.com" autocomplete="off" required/>
             <br>
             <label for="pd">Jelszó</label>
             <input id ="pd" type="password" name="password" maxlength="100" autocomplete="off" required/>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" name="login">
             <input type="reset">
             <input type="hidden" id="custId" name="custId" value="1">
         </div>

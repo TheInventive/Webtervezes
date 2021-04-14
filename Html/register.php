@@ -1,3 +1,5 @@
+<?php include "../php/register.php" ?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -29,7 +31,7 @@
                 <a href="login.php">Login</a>
             </li>
             <li>
-                <a class="active" href="register.html">Regisztráció</a>
+                <a class="active" href="register.php">Regisztráció</a>
             </li>
         </ul>
     </nav>
