@@ -1,9 +1,9 @@
 <?php
   session_start();
-  include "kozos.php";              
-  $fiokok = loadUsers("users.txt"); 
+  include "felhasznalok.php";
+  $fiokok = loadUsers("users.txt");
 
-  $uzenet = ""; 
+  $uzenet = "";
 
 
   if (isset($_POST["login"])) {
@@ -42,22 +42,22 @@
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="casual-cars.html">Hétköznapi autók</a>
+                <a href="casual-cars.php">Hétköznapi autók</a>
             </li>
             <li>
-                <a href="electric-cars.html">Elektromos autók</a>
+                <a href="electric-cars.php">Elektromos autók</a>
             </li>
             <li>
-                <a href="luxury-cars.html">Luxus autók</a>
+                <a href="luxury-cars.php">Luxus autók</a>
             </li>
             <li>
-                <a href="blog.html">Blog</a>
+                <a href="blog.php">Blog</a>
             </li>
             <li>
-                <a class="active" href="login.html">Login</a>
+                <a class="active" href="login.php">Login</a>
             </li>
             <li>
-                <a href="register.html">Regisztráció</a>
+                <a href="register.php">Regisztráció</a>
             </li>
         </ul>
     </nav>
