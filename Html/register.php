@@ -27,12 +27,17 @@
             <li>
                 <a href="blog.php">Blog</a>
             </li>
-            <li>
-                <a href="login.php">Login</a>
-            </li>
-            <li>
-                <a class="active" href="register.php">Regisztráció</a>
-            </li>
+            <?php
+            include "../php/session-start.php";
+            if(isset($_SESSION["user"])){
+                echo '<li>
+                <a href="../php/logout.php">Logout</a>
+            </li>';
+            }else
+                echo
+                '<li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Regisztráció</a></li>';
+            ?>
         </ul>
     </nav>
 </header>
@@ -61,7 +66,7 @@
                 <label for="un">E-mail-cím</label>
                 <input id="un" type="email" name="email" maxlength="100" placeholder="example@online.com" autocomplete="off" required/>
                 <label for="tel">Telefonszám</label>
-                <input id="tel" type="tel" maxlength="100" placeholder="+36 00 00 00 000" pattern="+[0-9]{2}-[0-9]{4}-[0-9]{3}"/>
+                <input id="tel" name="tel" type="tel" maxlength="100" placeholder="+36 00 00 00 000" pattern="+[0-9]{2}-[0-9]{4}-[0-9]{3}"/>
             </fieldset>
             <br>
             <label for="pd">Jelszó</label>

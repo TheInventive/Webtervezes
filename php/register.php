@@ -1,35 +1,40 @@
 <?php
-  session_start();
-  include "felhasznalok.php";
-  $fiokok = loadUsers("../users.txt");
+    include "session-start.php";
+    include "felhasznalok.php";
+    $fiokok = loadUsers("../users.txt");
 
-  $hibak = [];
+    $hibak = [];
 
-  if (isset($_POST["regis"])) {
-    if (!isset($_POST["username"]) || trim($_POST["username"]) === "")
+    if (isset($_POST["regis"])) {
+     if (!isset($_POST["username"]) || trim($_POST["username"]) === "")
       $hibak[] = "A felhasználónév megadása kötelező!";
 
-    if (!isset($_POST["password"]) || trim($_POST["password"]) === "")
-      $hibak[] = "A jelszó és az ellenőrző jelszó megadása kötelező!";
+        if (!isset($_POST["password"]) || trim($_POST["password"]) === "")
+        $hibak[] = "A jelszó és az ellenőrző jelszó megadása kötelező!";
 
 
-    $felhasznalonev = $_POST["username"];
-    $jelszo = $_POST["password"];
+        $felhasznalonev = $_POST["username"];
+        $jelszo = $_POST["password"];
 
-    if($fiokok != NULL){
-        foreach ($fiokok as $fiok) {
-          if ($fiok["username"] === $felhasznalonev)
-            $hibak[] = "A felhasználónév már foglalt!";
+        if($fiokok != NULL){
+         foreach ($fiokok as $fiok) {
+            if ($fiok["username"] === $felhasznalonev)
+                $hibak[] = "A felhasználónév már foglalt!";
+            }
         }
-    }
 
     if (strlen($jelszo) < 8)
       $hibak[] = "A jelszónak legalább 8 karakter hosszúnak kell lennie!";
 
-
-
     if (count($hibak) === 0) {
-      $fiokok[] = ["username" => $felhasznalonev, "password" => $jelszo];
+      $fiokok[] = [
+          "username" => $felhasznalonev,
+          "password" => $jelszo,
+          "gender" => $_POST["sex"],
+          "date_of_birth" => $_POST["date-of-birth"],
+          "email" => $_POST["email"],
+          "tel" => $_POST["tel"]
+          ];
       saveUsers("../users.txt", $fiokok);
       $siker = TRUE;
       header("Location: ../Html/login.php");
@@ -40,4 +45,3 @@
       header("Location: index.php");
     }
   }
-?>

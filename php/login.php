@@ -1,6 +1,6 @@
 <?php
+  include "session-start.php";
   include "felhasznalok.php";
-  session_start();
   $fiokok = loadUsers("../users.txt");
   if($fiokok == NULL){
   die();
@@ -24,10 +24,9 @@
         if ($fiok["username"] === $felhasznalonev && $fiok["password"] === $jelszo)
         {
           $uzenet = "Sikeres belépés!";
-          $_SESSION["user"] = $fiok;
+          $_SESSION["user"] = true;
           header("Location: ../Html/blog.php");
         }
      }
     }
   }
-?>

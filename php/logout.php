@@ -1,8 +1,10 @@
 <?php
-	session_start();
+include "session-start.php";
 
-	session_unset();
+$_SESSION = array();
+if(isset($_COOKIE[session_name()])){
+    setcookie(session_name(),session_id(),time()-3600,'/');
+}
 	session_destroy();
 
-	header("Location: login.php");
-?>
+	header("Location: ../Html/login.php");

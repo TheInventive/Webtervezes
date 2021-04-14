@@ -18,8 +18,9 @@
           $users[] = $user;
 
         }
-          return $users;
           fclose($file);
+          return $users;
+
     }
   }
 
@@ -36,4 +37,3 @@
 
     fclose($file);
   }
-?>

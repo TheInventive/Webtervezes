@@ -25,12 +25,18 @@
             <li>
                 <a class="active" href="blog.php">Blog</a>
             </li>
-            <li>
-                <a href="login.php">Login</a>
-            </li>
-            <li>
-                <a href="register.php">Regisztráció</a>
-            </li>
+            <?php
+            include "../php/session-start.php";
+            if(isset($_SESSION["user"])){
+                echo '<li>
+                <a href="../php/logout.php">Logout</a>
+            </li>';
+            }
+            else
+                echo
+                '<li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Regisztráció</a></li>';
+            ?>
         </ul>
     </nav>
 </header>
