@@ -1,0 +1,1 @@
+s:57:"A jelszónak legalább 8 karakter hosszúnak kell lennie!";
