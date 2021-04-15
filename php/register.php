@@ -1,7 +1,7 @@
 <?php
-    include "session-start.php";
-    include "felhasznalok.php";
-    $fiokok = loadUsers("../users.txt");
+require_once "User.php";
+require_once "session-start.php";
+    $fiokok = User::loadUsers("../users.txt");
 
     $hibak = [];
 
@@ -27,21 +27,15 @@
       $hibak[] = "A jelszónak legalább 8 karakter hosszúnak kell lennie!";
 
     if (count($hibak) === 0) {
-      $fiokok[] = [
-          "username" => $felhasznalonev,
-          "password" => $jelszo,
-          "gender" => $_POST["sex"],
-          "date_of_birth" => $_POST["date-of-birth"],
-          "email" => $_POST["email"],
-          "tel" => $_POST["tel"]
-          ];
-      saveUsers("../users.txt", $fiokok);
+      $fiokok[] = new User($felhasznalonev, $jelszo,
+              $_POST["date-of-birth"],$_POST["sex"], $_POST["email"], $_POST["tel"]);
+      User::saveUsers("../users.txt", $fiokok);
       $siker = TRUE;
       header("Location: ../Html/login.php");
 
     } else {
       $siker = FALSE;
-      saveUsers("users.txt", $hibak);
+      User::saveUsers("users.txt", $hibak);
       header("Location: index.php");
     }
   }

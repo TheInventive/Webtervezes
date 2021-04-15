@@ -7,9 +7,7 @@
 <link rel="stylesheet" href="../Css/mainPage.css">
 <body>
  <header>
-     <?php
-     include "navBar.php";
-     ?>
+     <?php include "navBar.php"; ?>
  </header>
   <main id="content">
    <h1>Üdvözöljük!</h1>

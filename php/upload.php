@@ -1,6 +1,6 @@
 <?php
-include "felhasznalok.php";
 include "session-start.php";
+require_once "User.php";
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -37,11 +37,11 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        if(isset($_SESSION["user"]["file"]) AND file_exists("../uploads/".$_SESSION["user"]["file"])){
-            unlink("../uploads/".$_SESSION["user"]["file"]);
+        if($_SESSION["user"]->getFile() != NULL AND file_exists("../uploads/".$_SESSION["user"]->getFile())){
+            unlink("../uploads/".$_SESSION["user"]->getFile());
         }
         echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-        updateUsers();
+        User::updateUsers();
         header("Location: ../Html/profile.php");
     } else {
         echo "Sorry, there was an error uploading your file.";

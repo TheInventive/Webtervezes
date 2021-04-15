@@ -7,20 +7,14 @@
 <link rel="stylesheet" href="../Css/profile.css">
 <body>
 <header>
-<?php include "navBar.php"; $user = $_SESSION["user"];?>
+<?php include "navBar.php"; $user = $_SESSION["user"]; if(!isset($_SESSION["user"])) header("Location: login.php");?>
 </header>
 <main class="container">
-    <!-- <h1><?php echo $user["gender"];?></h1>
-    <h1><?php echo $user["tel"];?></h1> -->
     <div class="card">
-        <img src="../uploads/<?php echo $user["file"]?>" alt="Tölts fel egy képet." style="width:100%">
-        <h1><?php echo $user["username"];?></h1>
-        <p class="title"><?php echo $user["email"];?></p>
-        <p><?php echo $user["date_of_birth"];?></p>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-facebook"></i></a>
+        <img src="../uploads/<?php echo $user->getFile(); ?>" alt="Tölts fel egy képet." style="width:100%">
+        <h1><?php echo $user->getUsername() ?></h1>
+        <p class="title"><?php echo $user->getEmail(); ?></p>
+        <p><?php echo $user->getDateOfBirth(); ?></p>
         <form action="../php/upload.php" method="post" enctype="multipart/form-data">
             Select image to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">

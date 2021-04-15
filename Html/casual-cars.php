@@ -8,9 +8,7 @@
 </head>
 <body>
 <header>
-    <?php
-    include "navBar.php";
-    ?>
+    <?php include "navBar.php"; ?>
 </header>
 <main>
     <table class="tableContainer">

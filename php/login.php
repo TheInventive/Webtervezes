@@ -1,8 +1,8 @@
 <?php
-  include "session-start.php";
-  include "felhasznalok.php";
+require_once "User.php";
+require_once "session-start.php";
 
-  $fiokok = loadUsers("../users.txt");
+  $fiokok = User::loadUsers("../users.txt");
   if($fiokok == NULL){
   die();
   }
@@ -22,7 +22,8 @@
       $uzenet = "Sikertelen belépés! A belépési adatok nem megfelelők!";
       foreach ($fiokok as $fiok)
      {
-        if ($fiok["username"] === $felhasznalonev && $fiok["password"] === $jelszo)
+         var_dump($fiok);
+        if ($fiok->getUsername() === $felhasznalonev && $fiok->getPassword() === $jelszo)
         {
           $uzenet = "Sikeres belépés!";
           $_SESSION["user"] = $fiok;

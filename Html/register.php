@@ -10,9 +10,7 @@
 </head>
 <body>
 <header>
-    <?php
-    include "navBar.php";
-    ?>
+    <?php include "navBar.php"; ?>
 </header>
 <div class="outside">
     <form method="POST">

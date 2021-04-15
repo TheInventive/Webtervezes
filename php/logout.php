@@ -1,5 +1,5 @@
 <?php
-include "session-start.php";
+require_once "session-start.php";
 
 $_SESSION = array();
 if(isset($_COOKIE[session_name()])){
