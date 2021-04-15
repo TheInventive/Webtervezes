@@ -1,31 +1,29 @@
 <nav>
     <ul>
         <li>
-            <a href="index.php">Home</a>
+            <a <?php if(basename($_SERVER['PHP_SELF']) == "index.php") echo 'class="active"'?> href="index.php">Home</a>
         </li>
         <li>
-            <a href="casual-cars.php">Hétköznapi autók</a>
+            <a <?php if(basename($_SERVER['PHP_SELF']) == "casual-cars.php") echo 'class="active"'?> href="casual-cars.php">Hétköznapi autók</a>
         </li>
         <li>
-            <a href="electric-cars.php">Elektromos autók</a>
+            <a <?php if(basename($_SERVER['PHP_SELF']) == "electric-cars.php") echo 'class="active"'?> href="electric-cars.php">Elektromos autók</a>
         </li>
         <li>
-            <a href="luxury-cars.php">Luxus autók</a>
+            <a <?php if(basename($_SERVER['PHP_SELF']) == "luxury-cars.php") echo 'class="active"'?> href="luxury-cars.php">Luxus autók</a>
         </li>
         <li>
-            <a class="active" href="blog.php">Blog</a>
+            <a <?php if(basename($_SERVER['PHP_SELF']) == "blog.php") echo 'class="active"'?> href="blog.php">Blog</a>
         </li>
         <?php
         include "../php/session-start.php";
-        if(isset($_SESSION["user"])){
-            echo '<li>
+        if(isset($_SESSION["user"])): ?>
+            <li>
                 <a href="../php/logout.php">Logout</a>
-            </li>';
-        }
-        else
-            echo
-            '<li><a href="login.php">Login</a></li>
-                <li><a href="register.php">Regisztráció</a></li>';
-        ?>
+            </li>
+        <?php else: ?>
+        <li><a <?php if(basename($_SERVER['PHP_SELF']) == "login.php") echo 'class="active"' ?> href="login.php">Login</a></li>
+        <li><a <?php if(basename($_SERVER['PHP_SELF']) == "register.php") echo 'class="active"' ?> href="register.php">Regisztráció</a></li>
+        <?php endif ?>
     </ul>
 </nav>
