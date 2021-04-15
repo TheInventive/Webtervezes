@@ -29,3 +29,17 @@
 
     fclose($file);
   }
+
+  function updateUsers() {
+      $_SESSION["user"]["file"] = htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
+      $fiokok = loadUsers("../users.txt");
+      for ($x = 0; $x < count($fiokok); $x++)
+      {
+          if ($fiokok[$x]["username"] == $_SESSION["user"]["username"])
+          {
+              $fiokok[$x] = $_SESSION["user"];
+          }
+      }
+      saveUsers("../users.txt", $fiokok);
+
+  }

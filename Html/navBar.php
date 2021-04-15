@@ -19,6 +19,9 @@
         include "../php/session-start.php";
         if(isset($_SESSION["user"])): ?>
             <li>
+                <a <?php if(basename($_SERVER['PHP_SELF']) == "profile.php") echo 'class="active"' ?> href="profile.php">Profile</a>
+            </li>
+            <li>
                 <a href="../php/logout.php">Logout</a>
             </li>
         <?php else: ?>
