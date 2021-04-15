@@ -7,12 +7,6 @@
     if ($file === FALSE)
       die("HIBA: A fájl megnyitása nem sikerült!");
 
-    if ( false )
-    {
-        fclose($file);
-        return NULL;
-    }
-    else {
         while (($line = fgets($file)) !== FALSE) {
           $user = unserialize($line);
           $users[] = $user;
@@ -20,8 +14,6 @@
         }
           fclose($file);
           return $users;
-
-    }
   }
 
 
