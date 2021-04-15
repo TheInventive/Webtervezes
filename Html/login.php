@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Css/navStyle.css">
     <link rel="stylesheet" href="../Css/login.css">
-    <title>Benevolent</title>
+    <title>Belépés</title>
 </head>
 <body>
 <header>

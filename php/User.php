@@ -11,32 +11,40 @@ class User
 
     public static function loadUsers($path) {
         $users = [];
+        try{
+            $file = fopen($path, "r");
+            if ($file === FALSE)
+                die("HIBA: A fájl megnyitása nem sikerült!");
 
-        $file = fopen($path, "r");
-        if ($file === FALSE)
-            die("HIBA: A fájl megnyitása nem sikerült!");
+            while (($line = fgets($file)) !== FALSE) {
+                $user = unserialize($line);
+                $users[] = $user;
 
-        while (($line = fgets($file)) !== FALSE) {
-            $user = unserialize($line);
-            $users[] = $user;
+            }
+            fclose($file);
 
+        }catch (Exception $exception){
+            echo 'Ismertetlen hiba lépett fel.';
         }
-        fclose($file);
         return $users;
     }
 
-
     public static function saveUsers($path, $users) {
-        $file = fopen($path, "w");
-        if ($file === FALSE)
-            die("HIBA: A fájl megnyitása nem sikerült!");
+        try{
+            $file = fopen($path, "w");
+            if ($file === FALSE)
+                die("HIBA: A fájl megnyitása nem sikerült!");
 
-        foreach($users as $user) {
-            $serialized_user = serialize($user);
-            fwrite($file, $serialized_user . "\n");
+            foreach($users as $user) {
+                $serialized_user = serialize($user);
+                fwrite($file, $serialized_user . "\n");
+            }
+
+            fclose($file);
+        }catch (Exception $exception){
+            echo 'Ismertetlen hiba lépett fel.';
         }
 
-        fclose($file);
     }
 
     public static function updateUsers() {

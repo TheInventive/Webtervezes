@@ -13,17 +13,6 @@
     ?>
 </header>
 <main>
-<?php
-include "../php/session-start.php";
-if(isset($_SESSION["user"])) {
-    echo '<section>
-<h2>Post hozzáadása</h2>
-<form>
-<input type="text" name="add" >
-<input type="submit" name="subm">
-</form>
-</section>';
-}?>
 <section>
     <h2>Mercedes W123</h2>
     <iframe width="960" height="540"
