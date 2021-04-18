@@ -54,7 +54,7 @@
             <td headers="de">
                 <div class="tdContainer">
                     <h1>Citroën C-ZERO</h1>
-                    <p>The <mark><u><a target="_blank" href="https://en.wikipedia.org/wiki/Citroën_C-Zero">Citroën C-ZERO</a></u></mark> is a supermini/city car produced by Citroën and is 100% electric powered. It was developed in
+                    <p>The <mark><u><a target="_blank" href="https://en.wikipedia.org/wiki/Mitsubishi_Motors">Citroën C-ZERO</a></u></mark> is a supermini/city car produced by Citroën and is 100% electric powered. It was developed in
                         collaboration with Mitsubishi Motors Corporation (MMC). Its sister will be marketed by Peugeot as the Peugeot iOn.
                         The differences between the cars will be <b>different exterior and interior styling</b> and a price difference.</p>
                 </div>

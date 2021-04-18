@@ -81,7 +81,7 @@
         </td>
         <td headers="de">
             <h1>Lamborghini Huracán</h1>
-            <p>The <mark><u><a target="_blank" href="https://en.wikipedia.org/wiki/Lamborghini_Huracán">Lamborghini Huracán</a></u></mark> <i>(Spanish for "hurricane"; [uɾaˈkan])</i> is a sports car manufactured by Italian automotive manufacturer Lamborghini replacing
+            <p>The <mark><u><a target="_blank" href="https://en.wikipedia.org/wiki/Lamborghini">Lamborghini Huracán</a></u></mark> <i>(Spanish for "hurricane"; [uɾaˈkan])</i> is a sports car manufactured by Italian automotive manufacturer Lamborghini replacing
                 the previous V10 offering, the Gallardo. The Huracán made its worldwide debut at the 2014 Geneva Auto Show, and was released in the market in the
                 second quarter of 2014. The LP 610-4 designation comes from the car having a 610 metric horsepower and 4 wheel drive, while LP stands for
                 "Longitudinale Posteriore", which refers to the longitudinal mid-rear engine position.</p>
@@ -99,7 +99,6 @@
                 introduced <i>in 1963.</i></p>
         </td>
     </tr>
-
     </table>
 </main>
 </body>
