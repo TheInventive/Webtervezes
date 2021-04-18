@@ -3,14 +3,15 @@ require_once "User.php";
 require_once "session-start.php";
     $fiokok = User::loadUsers("../users.txt");
 
-    try{
     if (isset($_POST["regis"])) {
         if (!isset($_POST["username"]) || trim($_POST["username"]) === "")
             throw new Exception("A felhasználónév megadása kötelező!");
 
-        if (!isset($_POST["password"]) || trim($_POST["password"]) === "")
+        if (!isset($_POST["password"]) || trim($_POST["password2"]) === "")
             throw new Exception("A jelszó és az ellenőrző jelszó megadása kötelező!");
 
+        if($_POST["password"] != $_POST["password2"])
+            throw new Exception("A jelszavak nem egyeznek meg!");
 
         $felhasznalonev = $_POST["username"];
         $jelszo = $_POST["password"];
@@ -30,7 +31,4 @@ require_once "session-start.php";
         User::saveUsers("../users.txt", $fiokok);
         $siker = TRUE;
         header("Location: ../Html/login.php");
-    }
-  }catch (Exception $exception){
-        echo $exception->getMessage();
     }

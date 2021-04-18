@@ -19,7 +19,6 @@ class User
             while (($line = fgets($file)) !== FALSE) {
                 $user = unserialize($line);
                 $users[] = $user;
-
             }
             fclose($file);
 

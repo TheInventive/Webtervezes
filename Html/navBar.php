@@ -16,7 +16,7 @@
             <a <?php if(basename($_SERVER['PHP_SELF']) == "blog.php") echo 'class="active"'?> href="blog.php">Blog</a>
         </li>
         <?php
-        include "../php/session-start.php";
+        require_once "../php/session-start.php";
         if(isset($_SESSION["user"])): ?>
             <li>
                 <a <?php if(basename($_SERVER['PHP_SELF']) == "profile.php") echo 'class="active"' ?> href="profile.php">Profile</a>

@@ -13,18 +13,18 @@
     ?>
 </header>
 <main>
-<section>
+<section style="height: 560px">
     <h2>Mercedes W123</h2>
-    <iframe width="960" height="540"
+    <iframe style="height: 95%; width: 100%;"
             src="https://www.youtube.com/embed/CuHJ2-B-CrM">
     </iframe>
 </section>
     <aside>
         <h2>Ebben a videóban egy klasszikus Mercedes W123 kerül bemutatásra</h2>
     </aside>
-<section>
+<section style="height: 560px">
     <h2>Skyactiv-X</h2>
-    <iframe width="960" height="540"
+    <iframe style="height: 95%; width: 100%;"
             src="https://www.youtube.com/embed/2bdpL_3cITE">
     </iframe>
 </section>

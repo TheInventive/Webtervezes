@@ -1,5 +1,3 @@
-<?php include "../php/login.php" ?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -13,10 +11,18 @@
     <?php include "navBar.php"; ?>
 </header>
 <div class="outside">
+    <?php
+    try {
+        include "../php/login.php" ;
+    }catch (Exception $exception){
+        $message = $exception->getMessage();
+        echo "<p style='color: red; font-weight: bold;'>$message</p>";
+    }
+    ?>
     <form method="post">
         <div class="container">
-            <label for="un">E-mail-cím</label>
-            <input id="un" type="text" name="username" maxlength="100" placeholder="example@online.com" autocomplete="off" required/>
+            <label for="un">Felhasználónév</label>
+            <input id="un" type="text" name="username" maxlength="100" autocomplete="off" required/>
             <br>
             <label for="pd">Jelszó</label>
             <input id ="pd" type="password" name="password" maxlength="100" autocomplete="off" required/>

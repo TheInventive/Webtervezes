@@ -7,7 +7,7 @@ require_once "session-start.php";
     die("Nincs regisztrált felhasználó!");
   }
 
-  if (isset($_POST["login"])) {try {
+  if (isset($_POST["login"])) {
     if (!isset($_POST["username"]) || trim($_POST["username"]) === "" || !isset($_POST["password"]) || trim($_POST["password"]) === "")
       throw new Exception("Hiba: Adj meg minden adatot!");
 
@@ -21,7 +21,4 @@ require_once "session-start.php";
             }
         }
       if(!$siker) throw new Exception("Sikertelen belépés! A belépési adatok nem megfelelők!");
-      }catch (Exception $exception){
-          echo $exception->getMessage();
-      }
   }

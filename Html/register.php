@@ -1,5 +1,3 @@
-<?php include "../php/register.php" ?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -13,6 +11,14 @@
     <?php include "navBar.php"; ?>
 </header>
 <div class="outside">
+    <?php
+    try{
+        include "../php/register.php";
+    }catch (Exception $exception){
+        $message = $exception->getMessage();
+        echo "<p style='color: red; font-weight: bold;'>$message</p>";
+    }
+    ?>
     <form method="POST">
         <div class="container">
             <label for="us">Felhasználónév</label>
@@ -42,6 +48,8 @@
             <br>
             <label for="pd">Jelszó</label>
             <input id ="pd" type="password" name="password" maxlength="100" autocomplete="off" required/>
+            <label for="pd2">Jelszó újra</label>
+            <input id ="pd2" type="password" name="password2" maxlength="100" autocomplete="off" required/>
             <br>
             <input type="submit" name="regis" value="Register">
             <input type="reset">
