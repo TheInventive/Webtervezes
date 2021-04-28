@@ -27,8 +27,10 @@ require_once "session-start.php";
             throw new Exception("A jelszónak legalább 8 karakter hosszúnak kell lennie!");
 
         if (strlen($felhasznalonev)<6)
-           throw new Exception("A felhasználónévnek legalább 6 karakter hosszúnak kell lennie")
+           throw new Exception("A felhasználónévnek legalább 6 karakter hosszúnak kell lennie");
 
+        if(preg_match('/[0-9a-zA-Z]+/', $jelszo)==false)
+            throw new Exception("A jelszó nem tartalmazhat csak kis- és nagybetűt vagy számot");
 
 
         $fiokok[] = new User($felhasznalonev, $jelszo,
