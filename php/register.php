@@ -15,6 +15,7 @@ require_once "session-start.php";
 
         $felhasznalonev = $_POST["username"];
         $jelszo = $_POST["password"];
+        $email = $_POST["email"];
 
         if ($fiokok != NULL) {
             foreach ($fiokok as $fiok) {
@@ -23,14 +24,17 @@ require_once "session-start.php";
             }
         }
 
-        if (strlen($jelszo) < 8)
+        if (strlen($_POST["password"]) < 8)
             throw new Exception("A jelszónak legalább 8 karakter hosszúnak kell lennie!");
 
-        if (strlen($felhasznalonev)<6)
+        if(preg_match('/[0-9a-zA-Z]+/', $_POST["password"])==false)
+            throw new Exception("A jelszó nem mást tartalmazhat csak kis- és nagybetűt vagy számot");
+
+        if (strlen($_POST["username"])<6)
            throw new Exception("A felhasználónévnek legalább 6 karakter hosszúnak kell lennie");
 
-        if(preg_match('/[0-9a-zA-Z]+/', $jelszo)==false)
-            throw new Exception("A jelszó nem tartalmazhat csak kis- és nagybetűt vagy számot");
+        if(preg_match('[a-zA-Z0-9\.-]+@([a-z0-9]+\.)+[a-z]{2,4}/', $email)==false)
+            throw new Exception("Nem megfelelő az email formátuma");
 
 
         $fiokok[] = new User($felhasznalonev, $jelszo,
