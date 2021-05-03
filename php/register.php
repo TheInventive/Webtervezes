@@ -27,10 +27,10 @@ require_once "session-start.php";
         if (strlen($_POST["password"]) < 8)
             throw new Exception("A jelszónak legalább 8 karakter hosszúnak kell lennie!");
 
-        if(preg_match('/[0-9a-zA-Z]+/', $_POST["password"]) == false)
+        if(preg_match('/[0-9a-zA-Z]+/', $jelszo) == false)
             throw new Exception("A jelszó nem mást tartalmazhat csak kis- és nagybetűt vagy számot");
 
-        if (strlen($felhasznalonev) <= 6 && strlen($felhasznalonev) >= 10)
+        if (strlen($felhasznalonev) < 6 && strlen($felhasznalonev) > 10)
            throw new Exception("A felhasználónévnek legalább 6 és maximum 10 karakter hosszúnak kell lennie");
 
         if(preg_match('/[A-Z][A-Za-z0-9]+/', $felhasznalonev) == false)
