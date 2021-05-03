@@ -24,7 +24,7 @@ require_once "session-start.php";
             }
         }
 
-        if (strlen($_POST["password"]) < 8)
+        if (strlen($jelszo) < 8)
             throw new Exception("A jelszónak legalább 8 karakter hosszúnak kell lennie!");
 
         if(preg_match('/[0-9a-zA-Z]+/', $jelszo) == false)
@@ -36,7 +36,7 @@ require_once "session-start.php";
         if(preg_match('/[A-Z][A-Za-z0-9]+/', $felhasznalonev) == false)
             throw new Exception("A felhasználónévnek nagybetűvel kell kezdődnie");
 
-        if(preg_match('/[a-zA-Z0-9\.-]+@([a-z0-9]+\.)+[a-z]{2,4}/', $email) == false)
+        if(preg_match('/[a-zA-Z0-9\.-]+@([a-z0-9-]+\.)+[a-z]{2,4}/', $email) == false)
             throw new Exception("Nem megfelelő az email formátuma");
 
 
